@@ -1,0 +1,130 @@
+.triage-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: var(--spacing-md);
+    background-color: var(--color-bg-app);
+}
+
+.progress-bar {
+    height: 8px;
+    background: #e2e8f0;
+    border-radius: var(--border-radius-pill);
+    margin-bottom: var(--spacing-lg);
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--color-primary);
+    transition: width 0.3s ease;
+}
+
+.triage-header {
+    margin-bottom: var(--spacing-lg);
+}
+
+.triage-step {
+    font-size: 0.9rem;
+    color: var(--color-text-sub);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.reassurance-text {
+    font-size: 0.9rem;
+    color: var(--color-safe);
+    font-weight: 600;
+    margin-top: 4px;
+}
+
+.question-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.question-title {
+    font-size: var(--font-size-xl);
+    font-weight: 800;
+    margin-bottom: var(--spacing-xl);
+    line-height: 1.2;
+}
+
+.options-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* Stack by default */
+    gap: var(--spacing-md);
+}
+
+.yes-no-grid {
+    grid-template-columns: 1fr 1fr;
+    height: 200px;
+    /* Make them tall */
+}
+
+.option-btn {
+    background: white;
+    border: 2px solid #e2e8f0;
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-lg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-md);
+    transition: transform 0.1s, border-color 0.1s;
+    box-shadow: var(--shadow-lg);
+}
+
+.option-btn:active {
+    transform: scale(0.98);
+    border-color: var(--color-primary);
+}
+
+.option-btn.safe {
+    border-color: var(--color-safe);
+    color: var(--color-safe);
+    /* Text color matching intent */
+}
+
+.option-btn.safe .opt-label {
+    color: inherit;
+}
+
+.option-btn.critical {
+    border-color: var(--color-critical);
+    color: var(--color-critical);
+}
+
+.option-btn.critical .opt-label {
+    color: inherit;
+}
+
+.opt-icon {
+    margin-bottom: 4px;
+}
+
+.opt-label {
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+    color: var(--color-text-main);
+}
+
+/* Override color for specific intents */
+.option-btn.safe .opt-label {
+    color: var(--color-safe);
+}
+
+.option-btn.critical .opt-label {
+    color: var(--color-critical);
+}
+
+.voice-hint {
+    text-align: center;
+    margin-top: auto;
+    padding: var(--spacing-md);
+    color: var(--color-text-sub);
+    font-size: 0.9rem;
+}

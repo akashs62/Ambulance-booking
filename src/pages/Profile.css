@@ -1,0 +1,130 @@
+.profile-container {
+    min-height: 100vh;
+    background: #f1f5f9;
+    padding: var(--spacing-md);
+    padding-bottom: 80px;
+}
+
+.profile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.profile-header h1 {
+    font-size: var(--font-size-lg);
+    font-weight: 800;
+}
+
+.lock-btn {
+    padding: 8px;
+    background: #e2e8f0;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.profile-section {
+    background: white;
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-md);
+    box-shadow: var(--shadow-lg);
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-md);
+    border-bottom: 2px solid #f1f5f9;
+    padding-bottom: 8px;
+}
+
+.field-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-md);
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+.field.full {
+    grid-column: span 2;
+}
+
+.field label {
+    font-size: 0.85rem;
+    color: var(--color-text-sub);
+    margin-bottom: 4px;
+}
+
+.value {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.value.highlight {
+    color: var(--color-primary);
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+.value.critical-text {
+    color: var(--color-critical);
+}
+
+.contact-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8fafc;
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius-md);
+    border: 1px solid #e2e8f0;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-info .name {
+    font-weight: 700;
+}
+
+.contact-info .relation {
+    font-size: 0.9rem;
+    color: var(--color-text-sub);
+}
+
+.call-mini-btn {
+    background: var(--color-safe);
+    color: white;
+    padding: 8px;
+    border-radius: 50%;
+}
+
+.consent-footer {
+    margin-top: var(--spacing-lg);
+    display: flex;
+    gap: 8px;
+    font-size: 0.85rem;
+    color: var(--color-text-sub);
+    padding: 0 var(--spacing-md);
+    align-items: flex-start;
+}

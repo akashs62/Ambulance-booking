@@ -1,0 +1,174 @@
+.paramedic-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.dark-mode {
+    background-color: #000;
+    color: #fff;
+    padding: var(--spacing-lg);
+    justify-content: center;
+}
+
+.incoming-alert {
+    color: var(--color-critical);
+    font-size: var(--font-size-xxl);
+    text-align: center;
+    animation: bg-pulse 1s infinite alternate;
+}
+
+@keyframes bg-pulse {
+    from {
+        text-shadow: 0 0 10px red;
+    }
+
+    to {
+        text-shadow: 0 0 20px red;
+    }
+}
+
+.alert-card {
+    background: #1e293b;
+    border: 4px solid var(--color-critical);
+    padding: var(--spacing-xl);
+    border-radius: var(--border-radius-lg);
+    margin: var(--spacing-xl) 0;
+    text-align: center;
+}
+
+.alert-card h2 {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-md);
+}
+
+.location-box {
+    font-size: var(--font-size-lg);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: var(--spacing-lg);
+}
+
+.badge-critical {
+    background: var(--color-critical);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: 800;
+}
+
+.accept-btn {
+    background: var(--color-safe);
+    color: white;
+    font-size: var(--font-size-xl);
+    font-weight: 800;
+    padding: 32px;
+    border-radius: var(--border-radius-xl);
+    width: 100%;
+}
+
+/* Nav Mode */
+.nav-mode {
+    background: #0f172a;
+    color: white;
+}
+
+.nav-header {
+    background: #1e293b;
+    padding: var(--spacing-md);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.turn-indicator {
+    display: flex;
+    gap: var(--spacing-md);
+    align-items: center;
+}
+
+.nav-icon {
+    color: var(--color-safe);
+}
+
+.turn-text h2 {
+    font-size: var(--font-size-xl);
+    line-height: 1;
+}
+
+.time-box {
+    background: #334155;
+    padding: 8px 16px;
+    border-radius: var(--border-radius-lg);
+    text-align: center;
+}
+
+.big-time {
+    display: block;
+    font-size: var(--font-size-xl);
+    font-weight: 800;
+    line-height: 1;
+}
+
+.patient-cards-scroll {
+    flex: 1;
+    padding: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    overflow-y: auto;
+}
+
+.info-card {
+    background: #334155;
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius-lg);
+}
+
+.info-card.critical {
+    background: #450a0a;
+    /* Dark Red */
+    border-left: 8px solid var(--color-critical);
+}
+
+.info-card.warning {
+    background: #422006;
+    /* Dark Orange */
+    border-left: 8px solid #f59e0b;
+}
+
+.card-label {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.8;
+    margin-bottom: 4px;
+}
+
+.card-value {
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+}
+
+.paramedic-controls {
+    padding: var(--spacing-md);
+    display: flex;
+    justify-content: space-around;
+    background: #1e293b;
+}
+
+.control-btn {
+    background: #475569;
+    color: white;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.control-btn.main {
+    background: var(--color-primary);
+    transform: scale(1.2);
+}
