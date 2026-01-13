@@ -14,3 +14,27 @@ The React Compiler is not enabled on this template because of its impact on dev 
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+
+
+
+How To Run
+
+How to Run It Locally
+Here’s how to start your React + Vite project on your machine:
+
+1. Clone the Repo
+Open a terminal and run:
+git clone https://github.com/akashs62/Ambulance-booking.git
+cd Ambulance-booking
+
+2. Install Dependencies
+Make sure you have Node.js installed.
+Then run:
+npm install
+This installs all libraries the project needs to build and run.
+
+3. Start the Development Server
+npm run dev
+This will start a local server (usually at http://localhost:5173) and open the project in your browser.
+You’ll see your site live while developing.
