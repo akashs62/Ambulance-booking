@@ -10,11 +10,18 @@ const Recommendation = () => {
     const [timeLeft, setTimeLeft] = useState(5);
 
     // Mock logic based on answers if available, otherwise default
-    const answers = location.state?.answers || {};
-    const isCritical = answers.breathing === 'yes' || answers.conscious === 'no';
+    const { answers, manualSelection } = location.state || {};
 
-    const recommendedType = isCritical ? 'ALS (Advanced Life Support)' : 'BLS (Basic Life Support)';
-    // const reason = isCritical ? 'Critical symptoms detected' : 'Standard transport sufficient';
+    // Determine type: Manual selection takes precedence, otherwise calculate
+    let recommendedType;
+    if (manualSelection) {
+        recommendedType = manualSelection;
+    } else {
+        const criticalCalc = answers?.breathing === 'yes' || answers?.conscious === 'no';
+        recommendedType = criticalCalc ? 'ALS (Advanced Life Support)' : 'BLS (Basic Life Support)';
+    }
+
+    const isCritical = recommendedType.includes('ALS');
 
     useEffect(() => {
         const timer = setInterval(() => {
