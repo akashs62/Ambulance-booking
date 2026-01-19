@@ -155,3 +155,27 @@
     text-decoration: underline;
     font-size: 0.9rem;
 }
+
+/* Back Button */
+.back-btn-rec {
+    position: absolute;
+    top: var(--spacing-md);
+    left: var(--spacing-md);
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 12px 20px;
+    border-radius: var(--border-radius-pill);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+    color: var(--color-text-main);
+    box-shadow: var(--shadow-lg);
+    transition: all 0.2s ease;
+}
+
+.back-btn-rec:hover {
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 15px 30px -5px rgb(0 0 0 / 0.2);
+}

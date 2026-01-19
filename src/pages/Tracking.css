@@ -250,3 +250,204 @@
     font-style: italic;
     margin-top: 4px;
 }
+
+/* Back Button */
+.back-btn {
+    position: absolute;
+    top: var(--spacing-md);
+    left: var(--spacing-md);
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 12px 20px;
+    border-radius: var(--border-radius-pill);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+    color: var(--color-text-main);
+    box-shadow: var(--shadow-lg);
+    transition: all 0.2s ease;
+}
+
+.back-btn:hover {
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 15px 30px -5px rgb(0 0 0 / 0.2);
+}
+
+/* Info Button */
+.info-btn {
+    margin-left: auto;
+    background: var(--color-primary);
+    color: white;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    z-index: 1000;
+}
+
+/* Driver Info Modal */
+.driver-info-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border-radius: var(--border-radius-xl);
+    padding: 0;
+    max-width: 90%;
+    width: 400px;
+    max-height: 80vh;
+    overflow-y: auto;
+    z-index: 1001;
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--spacing-lg);
+    border-bottom: 2px solid #f1f5f9;
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 10;
+}
+
+.modal-header h2 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--color-text-main);
+}
+
+.modal-close {
+    background: #f1f5f9;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-sub);
+    transition: all 0.2s ease;
+}
+
+.modal-close:hover {
+    background: #e2e8f0;
+    color: var(--color-text-main);
+}
+
+.modal-content {
+    padding: var(--spacing-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.driver-avatar-large {
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin: 0 auto;
+    box-shadow: 0 10px 25px -5px rgba(102, 126, 234, 0.4);
+}
+
+.driver-info-details {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    background: #f8fafc;
+    border-radius: var(--border-radius-lg);
+    transition: all 0.2s ease;
+}
+
+.info-row:hover {
+    background: #f1f5f9;
+    transform: translateX(4px);
+}
+
+.info-label {
+    font-size: 0.9rem;
+    color: var(--color-text-sub);
+    font-weight: 600;
+}
+
+.info-value {
+    font-size: 1rem;
+    color: var(--color-text-main);
+    font-weight: 700;
+    text-align: right;
+}
+
+.modal-call-btn {
+    width: 100%;
+    background: var(--color-safe);
+    color: white;
+    padding: 16px;
+    border-radius: var(--border-radius-lg);
+    font-size: 1.1rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    box-shadow: 0 4px 14px 0 rgba(22, 163, 74, 0.39);
+    transition: all 0.2s ease;
+}
+
+.modal-call-btn:hover {
+    background: #15803d;
+    box-shadow: 0 6px 20px 0 rgba(22, 163, 74, 0.5);
+}
+
+/* Smooth scrolling for modal */
+.driver-info-modal {
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e1 #f1f5f9;
+}
+
+.driver-info-modal::-webkit-scrollbar {
+    width: 8px;
+}
+
+.driver-info-modal::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 10px;
+}
+
+.driver-info-modal::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 10px;
+}
+
+.driver-info-modal::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
