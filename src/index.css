@@ -37,6 +37,12 @@
   --shadow-critical: 0 20px 25px -5px rgb(220 38 38 / 0.3), 0 8px 10px -6px rgb(220 38 38 / 0.3);
 }
 
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
