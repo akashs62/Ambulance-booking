@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Phone, Share2, MapPin, Navigation, User, CheckCircle, Activity, Bed, ArrowLeft, Info, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
-import TrackingMap from '../components/TrackingMap';
+import GoogleTrackingMap from '../components/GoogleTrackingMap';
 import './Tracking.css';
 
 const Tracking = () => {
@@ -38,8 +38,8 @@ const Tracking = () => {
             </motion.button>
 
             <div className="map-view">
-                {/* Mapbox Map */}
-                <TrackingMap />
+                {/* Google Maps */}
+                <GoogleTrackingMap />
 
                 {/* Hospital Readiness Panel Overlay */}
                 <motion.div

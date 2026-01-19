@@ -7,7 +7,6 @@ const GoogleTrackingMap = () => {
     // Simulated locations (Delhi coordinates)
     const [ambulanceLocation, setAmbulanceLocation] = useState({ lat: 28.6139, lng: 77.2090 });
     const patientLocation = { lat: 28.6358, lng: 77.2295 };
-    const mapCenter = { lat: 28.6249, lng: 77.2190 };
 
     const { isLoaded } = useJsApiLoader({
         googleMapsApiKey: import.meta.env.VITE_GOOGLE_MAPS_API_KEY,
